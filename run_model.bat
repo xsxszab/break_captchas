@@ -1,0 +1,1 @@
+python run.py -b 128 -l 40 -w 120 -e 2 -r 0.85
