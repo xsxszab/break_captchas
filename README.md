@@ -48,23 +48,37 @@ The pretrained model has accuracy above 96% on four characters verification code
 
 ### Image preprocessing method (./utils/util_func.py)
 Let's take one image for example.
-![test](./sample/test.jpg)
+<p align="center">
+  <img width="460" height="300" src="./sample/test.jpg">
+</p>
 
 Input images must be of the same size and RGB format,so firstly we resize them into given height and width. (in this example the size of test image is already the given size, so there's no difference)
-![test1](./sample/test1.jpg)
+<p align="center">
+  <img width="460" height="300" src="./sample/test1.jpg">
+</p>
 
 After that, convert images from RGB format into grayscale. 
-![test2](./sample/test2.png)
+<p align="center">
+  <img width="460" height="300" src="./sample/test2.jpg">
+</p>
 
 Then, to remove dots in the image, we apply dilation operation on the image.
-![test3](./sample/test3.png)
+<p align="center">
+  <img width="460" height="300" src="./sample/test3.jpg">
+</p>
 
 In order to smooth the background and also keep gradients of symbols' edges, Bilateral Filter performed well.
-![test4](./sample/test4.png)
+<p align="center">
+  <img width="460" height="300" src="./sample/test4.jpg">
+</p>
 
 There's still some lines in the image, in our dataset lines are usually brighter than real letters or numbers, so we choose a specific operation to darken all pixels above the threshold.
-![test5](./sample/test5.png)
+<p align="center">
+  <img width="460" height="300" src="./sample/test5.jpg">
+</p>
 
 After Processing edges are not so clear, so we use a high-pass filter to sharpen the edges, then we get the preprocessed images.
 
-![test6](./sample/test6.png)
+<p align="center">
+  <img width="460" height="300" src="./sample/test6.jpg">
+</p>
