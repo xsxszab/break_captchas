@@ -59,26 +59,26 @@ Input images must be of the same size and RGB format,so firstly we resize them i
 
 After that, convert images from RGB format into grayscale. 
 <p align="center">
-  <img width="460" height="300" src="./sample/test2.jpg">
+  <img width="460" height="300" src="./sample/test2.png">
 </p>
 
 Then, to remove dots in the image, we apply dilation operation on the image.
 <p align="center">
-  <img width="460" height="300" src="./sample/test3.jpg">
+  <img width="460" height="300" src="./sample/test3.png">
 </p>
 
 In order to smooth the background and also keep gradients of symbols' edges, Bilateral Filter performed well.
 <p align="center">
-  <img width="460" height="300" src="./sample/test4.jpg">
+  <img width="460" height="300" src="./sample/test4.png">
 </p>
 
 There's still some lines in the image, in our dataset lines are usually brighter than real letters or numbers, so we choose a specific operation to darken all pixels above the threshold.
 <p align="center">
-  <img width="460" height="300" src="./sample/test5.jpg">
+  <img width="460" height="300" src="./sample/test5.png">
 </p>
 
 After Processing edges are not so clear, so we use a high-pass filter to sharpen the edges, then we get the preprocessed images.
 
 <p align="center">
-  <img width="460" height="300" src="./sample/test6.jpg">
+  <img width="460" height="300" src="./sample/test6.png">
 </p>
